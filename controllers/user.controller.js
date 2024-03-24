@@ -13,6 +13,7 @@ exports.findAll = async (req, res) => {
 
 exports.findOne = async(req, res) => {
     console.log("Find a user")
+    const username = req.params.username
 
     try {
         const result = await User.findOne({username: username})
