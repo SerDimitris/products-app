@@ -9,8 +9,7 @@ $(document).ready(function(){
     // console.log(">>", response);
     let data = response.data;
     // let status = response.status
-    
-    if (data.length > 0) { 
+    if (data.length>0) { 
         createTbody(data);
     } else {
         alert(false,'Πρόβλημα στην αναζήτηση των χρηστών ('+ data.message + ')');
@@ -44,10 +43,10 @@ $(document).ready(function(){
       type: "post",
       data: item,
       dataType: "JSON",
-      // encode: true,
+      encode: true,
     })
     .done( function(response) {
-      // console.log(">>", response);
+      console.log(">>", response);
       
       let data = response.data;
       let status = response.status
@@ -61,7 +60,7 @@ $(document).ready(function(){
           console.log(false,'Πρόβλημα στην εισαγωγή του χρήστη ('+ data.message + ')');
           alert(false,'Πρόβλημα στην εισαγωγή του χρήστη ('+ data.message + ')');
           $('#frmUser')[0].reset();
-          // console.log(data.message);
+          console.log(data.message);
       }
     });
 

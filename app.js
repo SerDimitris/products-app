@@ -19,7 +19,7 @@ mongoose.connect(process.env.MONGODB_URI)
 
 const cors = require('cors')
 app.use(cors({
-    origin: ['http://localhost:8000/', 'http://wwww.aueb.gr']
+    origin: '*'
 }))
 
 const user = require('./routes/user.route')
